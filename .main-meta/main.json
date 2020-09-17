@@ -40,15 +40,19 @@
         "subcategories": [
             "MCC",
             [
-               "Peripherals", "Timer1"
+               "Peripherals", "TMR1"
             ]
         ],
         "peripherals": [
-            "Timer1"
+            "TMR1",
+			"PORT"
         ],
         "keywords": [
-            "MCC",
-            "Timer1"
+            "Lighting",
+            "light",
+			"Sensors",
+			"Core Independent",
+			"Interrupts"
         ],
 		"additionalData": {
 			"longDescription": {
