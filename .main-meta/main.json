@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15244-led-timer-example",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "displayName": "Toggle an LED using TImer1 with PIC16F15244",
         "projectName": "pic16f15244-led-timer-example",
         "shortDescription": "The 'pic16f15244-led-timer-example' code example uses the PIC16F15244 Curiosity Nano Development board to demonstrate how to toggle LED0 every one second using Timer1 to configure the one-second time period.",
