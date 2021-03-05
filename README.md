@@ -54,30 +54,19 @@ Timer1 is configured such that it will roll-over every second, causing an interr
   ![Timer1 Configuration](images/TMR1MCC.png)
 
 
-###### Example 1: IOCCF Interrupt Service Routine Code Snippet
+###### Example 1: TMR1 Interrupt Service Routine Code Snippet
 
-    void TMR1_ISR(void)
-    {
-        PIR1bits.TMR1IF = 0;                   // Clear the TMR1 interrupt flag
-        TMR1_WriteTimer(timer1ReloadVal);
-
-        if(TMR1_InterruptHandler)
-        {
-            TMR1_InterruptHandler();
-        }
-    }
-
-    void TMR1_DefaultInterruptHandler(void)
-    {
-      if(LED0_TRIS == 1)
-      {
-          LED0_SetDigitalOutput();            // Turn LED0 ON
-      }
-      else
-      {
-          LED0_SetDigitalInput();             // Turn LED0 OFF
-      }
-    }
+    static void Timer1_DefaultOverflowCallback(void)
+	{
+	    if(LED0_TRIS == 1)
+	    {
+	        LED0_SetDigitalOutput();
+	    }
+	    else
+	    {
+	        LED0_SetDigitalInput();
+	    }
+	}
 
 
 ## Summary

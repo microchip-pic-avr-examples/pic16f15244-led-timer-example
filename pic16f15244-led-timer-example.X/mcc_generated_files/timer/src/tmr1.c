@@ -196,8 +196,6 @@ void Timer1_OverflowCallbackRegister(void (* CallbackHandler)(void))
 
 static void Timer1_DefaultOverflowCallback(void)
 {
-    //Add your interrupt code here or
-    //Use Timer1_OverflowCallbackRegister function to use Custom ISR
     if(LED0_TRIS == 1)
     {
         LED0_SetDigitalOutput();
