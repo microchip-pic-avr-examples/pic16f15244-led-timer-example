@@ -1,3 +1,24 @@
+/**
+  @Generated CLOCK CONTROL Source File
+
+  @Company:
+    Microchip Technology Inc.
+
+  @File Name:
+    clock.c
+
+  @Summary:
+    This is the clock.c file generated using CCL
+
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
+    Generation Information :
+        Driver Version    :  2.00
+    The generated drivers are tested against the following:
+        Compiler          :  XC8 v2.20
+        MPLAB             :  MPLAB X 5.40
+*/
+
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -7,7 +28,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     with Microchip products. See the Microchip license agreement accompanying 
     this software, if any, for additional info regarding your rights and 
     obligations.
-
+    
     MICROCHIP SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT 
     WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT 
     LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT 
@@ -17,7 +38,7 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     THEORY FOR ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT 
     LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, 
     OR OTHER SIMILAR COSTS. 
-
+    
     To the fullest extend allowed by law, Microchip and its licensors 
     liability will not exceed the amount of fees, if any, that you paid 
     directly to Microchip to use this software. 
@@ -31,19 +52,24 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
+#include <xc.h>
+#include "../clock.h"
 
-int main(void)
+void CLOCK_Initialize(void)
 {
-    SYSTEM_Initialize();                                                        // Initialize the device    
-    INTERRUPT_GlobalInterruptEnable();                                          // Enable the Global Interrupts
-    INTERRUPT_PeripheralInterruptEnable();                                      // Enable the Peripheral Interrupts
-
-    while(1)
-    {
-    }
+    // Set the CLOCK CONTROL module to the options selected in the user interface.
+    // 
+    OSCCON = 0x20;
+    // HFOEN disabled; MFOEN disabled; LFOEN disabled; ADOEN disabled; 
+    OSCEN = 0x0;
+    // HFFRQ 1_MHz; 
+    OSCFRQ = 0x0;
+    // 
+    OSCSTAT = 0x0;
+    // TUN undefined; 
+    OSCTUNE = 0x0;
 }
+/**
+ End of File
+*/
