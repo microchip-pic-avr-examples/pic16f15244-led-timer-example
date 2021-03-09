@@ -109,7 +109,7 @@ void Timer1_Initialize(void)
 
     // Enabling interrupt.
     PIE2bits.TMR1GIE = 1;
-    T1CON = 0x30;
+    T1CON = 0x31;
 }
 
 void Timer1_Start(void)
