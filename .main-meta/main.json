@@ -10,21 +10,21 @@
         "shortDescription": "The 'pic16f15244-led-timer-example' code example uses the PIC16F15244 Curiosity Nano Development board to demonstrate how to toggle LED0 every one second using Timer1 to configure the one-second time period.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.45.0"
+            "semverRange": ">=6.10.0"
         },
         "compiler": [
 			{
 				"name": "XC8",
-				"semverRange": "^2.31.0"
+				"semverRange": "^2.41.0"
 			}
 		],
         "dfp": {
             "name": "PIC16F1xxxx_DFP",
-            "semverRange": "^1.5.133"
+            "semverRange": "^1.18.352"
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": ">=4.1.0"
+            "semverRange": ">=5.3.7"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -36,23 +36,18 @@
                 "versionRange": "*"
             }
         },
-        "author": "Microchip",
-        "subcategories": [
-            "MCC",
-            [
-               "Peripherals", "TMR1"
-            ]
-        ],
+        "author": "Usha G",
+       
         "peripherals": [
             "TMR1",
 			"PORT"
         ],
         "keywords": [
             "Lighting",
-            "light",
-			"Sensors",
+            "Light",
+			"Sensor",
 			"Core Independent",
-			"Interrupts",
+			"Periodic Interrupts",
 			"Melody"
         ],
 		"additionalData": {

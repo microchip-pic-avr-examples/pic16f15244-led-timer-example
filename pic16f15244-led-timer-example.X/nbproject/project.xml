@@ -4,22 +4,18 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>pic16f15244-led-timer-example</name>
-            <creation-uuid>61116b8b-142a-4077-8bf9-6846590c3c8c</creation-uuid>
+            <creation-uuid>e54c8881-84bb-4904-ba24-5a6b6a207957</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions>c</c-extensions>
-            <cpp-extensions/>
-            <header-extensions>h</header-extensions>
-            <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>free</name>
+                    <name>pro</name>
                     <type>2</type>
                 </confElem>
                 <confElem>
-                    <name>pro</name>
+                    <name>free</name>
                     <type>2</type>
                 </confElem>
             </confList>
