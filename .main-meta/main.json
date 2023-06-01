@@ -40,7 +40,7 @@
        
         "peripherals": [
             "TMR1",
-			"PORT"
+			"GPIO"
         ],
         "keywords": [
             "Lighting",
